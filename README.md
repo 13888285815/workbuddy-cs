@@ -48,6 +48,8 @@ xdg-open index.html
 - 单文件 677KB，完全自包含
 - 无任何外部依赖
 
-## 源码来源
+## 技术说明
 
-基于 [three.js](https://github.com/mrdoob/three.js) 官方示例修改
+- Three.js r160 + Octree + Capsule（已打包进单文件）
+- 单文件 ~677KB，完全自包含
+- 无任何外部依赖或外部链接
