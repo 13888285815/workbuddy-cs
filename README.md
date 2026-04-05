@@ -1,20 +1,20 @@
 # Three.js FPS Demo
 
-🎮 基于 Three.js 的第一人称射击游戏演示，包含八叉树碰撞检测。
+🎮 基于 Three.js 的第一人称射击游戏演示，**完全独立运行，无需网络**。
 
-## 在线演示
+## 演示地址
 
-**演示地址**: https://13888285815.github.io/workbuddy-cs/
+**GitHub Pages**: https://13888285815.github.io/workbuddy-cs/
 
 ## 功能特性
 
-- **八叉树碰撞检测** - 高效的碰撞系统
+- **完全离线** - Three.js 已打包进 HTML，无需 CDN
+- **八叉树碰撞检测** - 高效物理碰撞
 - **第一人称视角** - WASD移动 + 鼠标视角
 - **跳跃系统** - Space键跳跃
 - **物理投掷** - 点击投掷彩色小球
 - **实时阴影** - PCF软阴影
 - **FPS计数器** - 实时显示帧率
-- **调试模式** - 可视化碰撞体（右上角GUI）
 
 ## 操作说明
 
@@ -25,28 +25,29 @@
 | Space | 跳跃 |
 | 鼠标左键 | 投掷小球 |
 
-## 技术栈
-
-- Three.js r160
-- GLTFLoader
-- Octree 碰撞检测
-- lil-gui 控制面板
+> 首次需要**点击页面**锁定鼠标才能移动视角！
 
 ## 本地运行
 
+直接用浏览器打开 `index.html` 即可，无需任何服务器！
+
 ```bash
-# 使用任意静态服务器
-npx serve .
-# 或
-python -m http.server 8080
+# macOS
+open index.html
+
+# Windows
+start index.html
+
+# Linux
+xdg-open index.html
 ```
 
-然后访问 http://localhost:8080
+## 技术说明
+
+- Three.js r160 + Octree + Capsule（已打包）
+- 单文件 677KB，完全自包含
+- 无任何外部依赖
 
 ## 源码来源
 
 基于 [three.js](https://github.com/mrdoob/three.js) 官方示例修改
-
-## License
-
-MIT License
